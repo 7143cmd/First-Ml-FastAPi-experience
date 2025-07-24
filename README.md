@@ -1,0 +1,1 @@
+Simple program which will change any bad word into ###n to secure your text
