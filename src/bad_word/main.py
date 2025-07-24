@@ -27,6 +27,6 @@ def start():
     # Сначала обучаем модель
 
     # Потом фильтруем текст
-    print("Filtered text:", filter_text("Fuckin moron, stop doing shit, asshole!"))
+    print("Filtered text:", filter_text("fuck, front, frontend, futball, furmark, fucimo, fuckonbre"))
 
 start()
