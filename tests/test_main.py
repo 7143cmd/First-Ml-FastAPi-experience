@@ -5,7 +5,7 @@ import pytest
         [
             ("This is a wonderful day but that guy is a fucking asshole!", "This is a wonderful day but that guy is a ####### ########"),
             ("You are asshole bitch!", "You are ####### ######"),
-            # ("I will never understand why this bitch was try to fuck a dog", "I will never understand why this ##### was try to #### a dog"),
+            ("Fuckin moron, stop doing shit, asshole!", "###### ###### stop doing ##### ########"),
         ]
 )
 def test_filter_text(text, filtered_text):
