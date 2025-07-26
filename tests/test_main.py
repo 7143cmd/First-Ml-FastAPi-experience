@@ -4,6 +4,7 @@ import pytest
         "text, filtered_text",
         [
             ("This is a wonderful day but that guy is a fucking asshole!", "This is a wonderful day but that guy is a ####### ########"),
+            ("Do you like play football? I vote for the team named <<Shahtar>>", "Do you like play football? I vote for the team named <<Shahtar>>"),
             ("You are asshole bitch!", "You are ####### ######"),
             ("Fuckin moron, stop doing shit, asshole!", "###### ###### stop doing ##### ########"),
         ]
