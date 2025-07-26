@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Censor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Write your text for analysis</h1>
+        <textarea id="input-text" maxlength="300" placeholder="Insert you text here..."></textarea>
+        <div class="result" id="response-text">Hello World</div>
+        <button id="continue-btn">Continue</button>
+    </div>
+    <script>
+        document.getElementById('continue-btn').addEventListener('click', () => {
+            document.getElementById('response-text').classList.add('show');
+        });
+    </script>
+</body>
+</html>

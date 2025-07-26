@@ -1,4 +1,4 @@
-from src.bad_word.main import filter_text
+from src.bad_word.model import filter_text
 import pytest
 @pytest.mark.parametrize(
         "text, filtered_text",
