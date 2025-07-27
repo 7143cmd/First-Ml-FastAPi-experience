@@ -1,5 +1,5 @@
 [project]
-name = "bad-word"
+name = "bad_word"
 version = "0.1.0"
 description = ""
 authors = [
