@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Censor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Write your text for analysis</h1>
+        <form id="censor-form">
+            <textarea id="input-text" name="text" maxlength="300" placeholder="Insert your text here..."></textarea>
+            
+            <button type="submit" id="continue-btn">Continue</button>
+        </form>
+        <div class="result" id="response-text">Hello World</div>
+    </div>
+    <script>
+        document.getElementById('censor-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const inputText = document.getElementById('input-text').value;
+
+            const response = await fetch('/censored', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: inputText })
+            });
+
+            const data = await response.json();
+
+            document.getElementById('response-text').innerText = data.result;
+            document.getElementById('response-text').classList.add('show');
+        });
+    </script>
+</body>
+</html>
