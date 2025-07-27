@@ -1,6 +1,5 @@
 annotated-types==0.7.0
 anyio==4.9.0
--e git+https://github.com/7143cmd/First-Ml-FastAPi-experience.git@cb33b09770ecc535c4a0a9a193a54351ed8e6825#egg=bad_word
 click==8.2.1
 colorama==0.4.6
 fastapi==0.116.1
