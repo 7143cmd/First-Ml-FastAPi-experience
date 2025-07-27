@@ -1,4 +1,4 @@
 __pycache__/
 .pytest_cache/
-src/bad_word/generate.py
-src/bad_word/update.py
+generate.py
+update.py
