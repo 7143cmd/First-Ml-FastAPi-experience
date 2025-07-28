@@ -1,5 +1,8 @@
 from model import filter_text
 import pytest
+from main import app
+from fastapi.testclient import TestClient
+
 @pytest.mark.parametrize(
         "text, filtered_text",
         [
@@ -31,3 +34,14 @@ import pytest
 )
 def test_filter_text(text, filtered_text):
     assert filter_text(text) == filtered_text
+
+
+def test_client():
+    client = TestClient(app)
+    text = "Go to hell with your stupid ideas."
+    response = client.post("/censored", json={"text": text})
+
+    assert response.status_code == 200
+
+    data = response.json()
+    assert data["result"] == "Go to #### with your stupid ideas."
